@@ -44,7 +44,7 @@ def prepare_dataloader(data_directory, mode, augment_parameters,
                             for data_dir in data_dirs]
     dataset = ConcatDataset(datasets)
     n_img = len(dataset)
-    print('Use a dataset with', n_img, 'images')
+    print('Using a dataset with', n_img, 'images')
     if mode == 'train':
         loader = DataLoader(dataset, batch_size=batch_size,
                             shuffle=True, num_workers=num_workers,
